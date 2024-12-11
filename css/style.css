@@ -1,0 +1,746 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 60px auto;
+}
+.header{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(99, 99, 203);
+    position: fixed;
+    z-index: 1000;
+}
+.header .logo {
+    float: left;
+}
+.header .logo > i{
+    font-size: 22px;
+    margin: 20px;
+    color: white;
+}
+.header .logo .search{
+    float: right;
+    line-height: 60px;
+    margin: 0 20px;
+    position: relative;
+}
+.header .logo .search i{
+    position: absolute;
+    top: 24px;
+    left: 10px;
+}
+.header .logo .search input[type='text']{
+    width: 250px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+}
+.header .links{
+    float: right;
+}
+.header .links{
+    list-style: none;
+    margin: 20px 30px;
+}
+.header .links li{
+    display: inline-block;
+}
+.header .links li a{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    position: relative;
+}
+.header .links li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 0;
+    background-color: blue;
+    transition: .5s;
+}
+.header .links li a:hover::before{
+    width: 100%;
+}
+
+.blog-li{
+    position: relative;
+}
+.blog-li:hover .blog-links{
+    visibility: visible;
+}
+.blog-links{
+    display: block;
+    position: absolute;
+    top:25px;
+    left: -10px;
+    background-color: #EEE;
+    border-radius: 10px;
+    width: 140px;
+    visibility: hidden;
+}
+.blog-links p{
+    color: rgb(99, 99, 203);
+    padding: 20px 10px;
+    cursor: pointer;
+    width: 130px;
+    font-size: 16px;
+    position: relative;
+}
+.blog-links p::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 13px;
+    height: 2px;
+    width: 0;
+    background-color: blue;
+    transition: .5s;
+}
+.blog-links p:hover::after{
+    width: 90%;
+}
+/* Start Landing */
+.land-content{
+    background-image: url(../imgs/purfume5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.land-content .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.land-info{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    text-align: center;
+}
+.land-info h2{
+    color: #FFF;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+.land-info p{
+    color: #777;
+    font-size: 18px;
+    margin: 15px 0;
+}
+.land-info button{
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 19px;
+    border: 0;
+}
+.land-info button.special-btn{
+    background-color: rgb(101, 101, 245);
+    color: #FFF;
+}
+.land-info button:hover{
+    opacity: 0.7;
+}
+/* End Landing */
+/* Start website Section */
+.website{
+    margin: 120px 0;
+}
+.title{
+    text-align: center;
+    font-size: 40px;
+    text-transform: capitalize;
+    padding-top: 40px;
+}
+.line{
+    margin: 10px auto 40px auto;
+    width: 120px;
+    height: 4px;
+    background-color:  rgb(101, 101, 245);
+}
+.website .box{
+    overflow: auto;
+}
+.website .website-box{
+    float: left;
+    width: 30%;
+    height: 200px;
+    border: 1px solid  rgb(101, 101, 245);
+    margin-bottom: 20px;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.website .website-box::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(101, 101, 245, 0.2);
+    transition: .5s;
+}
+.website .website-box:hover::after{
+    width: 100%;
+    height: 100%;
+}
+.specail-box{
+    margin: 0 5%;
+}
+.website .website-box i{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+    color: rgb(101, 101, 245);
+}
+.website .website-box h3{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.website .website-box p{
+    color: #777;
+    margin-bottom: 25px;
+}
+.website .website-box a{
+    text-decoration: none;
+    background-color: rgb(101, 101, 245);
+    color: #FFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/* End website Section */
+/* Start Featured */
+.featured{
+    background-color: rgba(101, 101, 245, 0.1);
+}
+.featured-item{
+    overflow: auto;
+    padding-bottom: 30px;
+}
+.featured-img{
+    float: left;
+    margin: 10px 50px;
+    position: relative;
+}
+.featured-img img{
+    width: 300px;
+    height: 200px;
+}
+.featured-img .featured-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    visibility: hidden;
+    transition: .3s;
+}
+.featured-img:hover .featured-info{
+    visibility: visible;
+}
+.featured-img .featured-info h2{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 40px 0 20px 0;
+    color: #ededed;
+}
+.featured-img .featured-info p{
+    margin-bottom: 20px;
+}
+.featured-img .featured-info a{
+    color: #777;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+/* End Featured */
+/* Start Offer Section */
+.offer-content{
+    overflow: auto;
+}
+.offer-box{
+    float: left;
+    width: 30%;
+    height: 200px;
+    border: 1px solid rgb(101, 101, 245);
+    margin-bottom: 40px;
+    border-radius: 5px;
+    position: relative;
+    transition: .3s;
+}
+.offer-box .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(101, 101, 245, 0.2);
+    transition: 0.3s;
+}
+.offer-box:hover .overlay{
+    width: 100%;
+    height: 100%;
+}
+.offer-box:hover h2{
+    color: rgb(84, 84, 212);
+}
+.offer-box:hover p{
+    color: black;
+}
+.special{
+    margin: 0 5%;
+}
+.offer-box i{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    margin: 10px 20px 10px 10px;
+    color: rgb(101, 101, 245);
+    font-size: 30px;
+}
+.offer-box h2{
+    margin: 20px 10px 10px 50px;
+}
+.offer-box p{
+    padding: 15px 30px;
+    color: #777;
+    line-height: 1.6;
+}
+/* End Offer Section */
+/* Start Choose Section */
+.choose .content{
+    overflow: auto;
+    margin-top: 110px;
+    margin-bottom: 130px;
+}
+.choose .content .info{
+    float: left;
+    width: 50%;
+    padding-top: 70px;
+}
+.choose .content .info .choose-title{
+    font-size: 35px;
+    text-transform: capitalize;
+} 
+.choose .content .info .under-line{
+    width: 80px;
+    height: 3px;
+    background-color:rgb(101, 101, 245) ;
+    margin: 10px 0;
+}
+.choose .content .info p{
+    color:#575757;
+    padding: 30px 0;
+}
+.choose .content .info ul{
+    list-style: none;
+}
+.content .info ul i{
+    color: rgb(101, 101, 245);
+}
+.content .info ul li{
+    color:#575757;
+    padding-bottom: 25px;
+}
+.content .img{
+    float: right;
+    width: 50%;
+    padding-left: 100px;
+    position: relative;
+}
+.content .img ul{
+    list-style: none;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+.content .img ul li{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #77777766;
+    display: inline-block;
+    margin: 0 5px;
+}
+.content .img ul li.active, 
+.content .img ul li:hover{
+    background-color: rgb(101, 101, 245);
+}
+/* End Choose Section */
+/* Start acheives section */
+.acheives{
+    width: 100%;
+    height: 400px;
+    background-image: url(../imgs/purfume1.jpg);
+    background-size: cover;
+    background-attachment:fixed;
+    position: relative;
+    color: #fff;
+    margin-bottom: 100px ;
+}
+.acheives .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height:100% ;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.acheives .acheive-content{
+    overflow: auto;
+    padding-top: 170px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.acheive-content .acheive-info{
+    float: left;
+    width: 25%;
+}
+.acheive-content .acheive-info i{
+    font-size: 30px;
+    color: rgb(98, 98, 232);
+    font-size: 35px;
+}
+.acheive-content .acheive-info h3{
+    margin-top: 15px;
+}
+/* Start acheives section */
+/* Start Pricing */
+.pricing-content{
+    overflow: auto;
+    padding: 60px;
+}
+.pricing-content .pricing-box{
+    float: left;
+    width: 30%;
+    border: 1px solid rgb(101, 101, 245);
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    transition: .3s;
+}
+.pricing-content .pricing-box::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(101, 101, 245, 0.2);
+    transition: .5s;
+}
+.pricing-content .pricing-box:hover::after{
+    height: 100%;
+}
+.pricing-content .box-2{
+    margin: 0 5%;
+}
+.pricing-content .pricing-box p{
+    padding-top: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.pricing-content .pricing-box:hover p{
+    color: rgb(101, 101, 245);
+}
+.pricing-content .pricing-box .month{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid rgb(101, 101, 245);
+    margin:20px auto;
+    padding: 15px 0;
+}
+.pricing-content .pricing-box:hover .month{
+    border-color: rgb(61, 61, 161);
+}
+.pricing-content .pricing-box .month h3{
+    font-size: 35px;
+}
+.pricing-content .pricing-box .month span{
+    text-transform: uppercase;
+}
+.pricing-content .pricing-box ul{
+    list-style: none;
+    text-transform:capitalize ;
+}
+.pricing-content .pricing-box ul li{
+    padding-bottom: 20px;
+}
+.pricing-content .pricing-box button{
+    margin-bottom: 25px;
+    padding: 10px 35px;
+    border-radius: 10px;
+    color: #FFF;
+    background-color:rgb(101, 101, 245);
+    font-weight: bold;
+    border: none;
+}
+/* End Pricing */
+/* Start About Section */
+.about{
+    background-image: url(../imgs/purfume3.jpg);
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    margin-bottom: 100px;
+}
+.about .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.about .about-content{
+    overflow: auto;
+    margin-top: 120px;
+}
+.about-content .about-card{
+    float: left;
+    width: 45%;
+    margin-left: 5%;
+}
+.about-content .about-card .about-person{
+    overflow: auto;
+    position: relative;
+}
+.about-content .about-card .about-person img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    float: left;
+}
+.about-content .about-card .about-person .info{
+    float: left;
+    position: absolute;
+    top: 25px;
+    left: 120px;
+}
+.about-content .about-card .about-person .info h3{
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 7px;
+}
+.about-content .about-card .about-person .info span{
+    color: rgb(51, 51, 177);
+    font-size: 20px;
+}
+.about-content .about-card p{
+    text-transform: capitalize;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+/* End About Section */
+/* Start Team Section */
+.team-content{
+    overflow: auto;
+    margin: 100px 0;
+    text-align: center;
+}
+.team-content .team-box{
+    float: left;
+    background-color: #EEE;
+    border-radius: 10px;
+    width: 30%;
+    overflow: hidden;
+    position: relative;
+}
+.team-content .team-box::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(101, 101, 245, 0.2);
+    transition: .5s;
+}
+.team-content .team-box:hover::before{
+    height: 100%;
+}
+.team-content .team-box:hover h3{
+    color: #FFF;
+}
+.team-content .team-box:hover p{
+    color: rgb(51, 51, 177);
+}
+.team-content .box-2{
+    margin: 0 5%;
+}
+.team-content .team-box .team-img{
+    margin:20px auto ;
+    position: relative;
+    width: 80%;
+}
+.team-content .team-box .team-img img{
+    height: 200px;
+    width: 100%;
+}
+.team-content .team-img .overlay-links{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+.team-content .team-box:hover .overlay-links{
+    visibility: visible;
+}
+.team-content .team-img .overlay-links i{
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgb(99, 99, 203);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: auto;
+}
+.team-content .team-box h3{
+    font-size: 22px;
+    padding: 5px;
+}
+.team-content .team-box p{
+    text-transform: uppercase;
+    margin: 15px;
+    color: #777;
+}
+/* End Team Section */
+/* Start News Section */
+.news{
+    margin: 130px 0;
+}
+.news-content {
+    overflow: auto;
+}
+.news-content .card-2{
+    margin: 0 5%;
+}
+.news-content .news-card{
+    float: left;
+    width: 30%;
+    text-align: center;
+    border: 1px solid rgb(101, 101, 245);
+    border-radius: 10px;
+    position: relative;
+}
+.news-content .news-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(101, 101, 245, 0.2);
+    transition: .5s;
+    z-index: -1;
+}
+.news-content .news-card:hover::before{
+    height: 100%;
+}
+.news-content .news-card img{
+    border-radius: 8px;
+    margin: 20px 0;
+    max-width: 100%;
+}
+.news-content .news-card i{
+    color: rgb(101, 101, 245);
+    font-weight: bold;
+}
+.news-content .news-card span{
+    padding-right: 15px;
+}
+.news-content .news-card h3{
+    margin: 20px 0;
+}
+.news-content .news-card:hover h3{
+    color: #FFF;
+}
+.news-content .news-card p{
+    color: #666363;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.news-content .news-card:hover p{
+    color: rgb(57, 57, 173);
+}
+.news-content .news-card a{
+    margin: 15px auto;
+    text-decoration: none;
+    color: #FFF;
+    background-color: rgb(101, 101, 245);
+    display: block;
+    width: 100px;
+    line-height: 30px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+}
+/* End News Section */
+/* Start Footer */
+.footer{
+    background-color: rgb(150, 150, 221);
+    width: 100%;
+    text-align: center;
+}
+.footer .img{
+    margin: 20px auto;
+    padding: 15px 0;
+    width: 300px;
+    height: 200px;
+}
+.footer .img img{
+    border-radius: 10px;
+}
+.footer .icons{
+    padding-bottom: 15px;
+}
+.footer .icons li{
+    display: inline-block;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(101, 101, 245);
+    color: #FFF;
+    line-height: 50px;
+}
+.footer .icons li:hover{
+    background-color: blue;
+    transition: .5s;
+}
+.footer p{
+    padding-bottom: 20px;
+}
+/* End Footer */
